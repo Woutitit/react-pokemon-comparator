@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <h1>Compare your favorite pokemon</h1>
       <Form />
       </div>
     );
