@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import AutoSuggest from './AutoSuggest';
 
 class Form extends React.Component {
   render() {
-  	return <AutoSuggest />;
+  	return <form>{this.props.children}</form>
   }
 }
 
