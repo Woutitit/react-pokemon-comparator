@@ -10,16 +10,18 @@ class App extends Component {
     suggestions: ["apple", "banana", "orange"]
   }
 
-  getSuggestions = () => {
-
-  }
-
   updateSuggestions = () => {
+    // 1) Fetch all pokemon names (And store locally?)
+    // 2) Filter pokemon names based on input of the autocomplete component.
+    // 3) Optional: Sort the filtered pokemon names on relevancy (the most relevant first in the array, the almost most relevant second, ...)
+    // 4) Select the first 5 results and set it to the suggestions variable. The suggestions will then be updated.
+
+    
     axios.get('https://pokeapi.co/api/v2/pokemon/?limit=949').then((response) => {
       const pokemon = response.data.results;
       console.log(pokemon);
       // Now, of this list we should check which pokemon names are relevant.
-      this.setState({suggestions: pokemon})
+      // this.setState({suggestions: pokemon})
     })
   }
 
@@ -27,7 +29,7 @@ class App extends Component {
     return (
       <div>
         <h1>Compare stats of Pokemon</h1>
-        <Autocomplete suggestions={this.state.suggestions} />
+        <Autocomplete suggestions={this.state.suggestions} onInputChange={this.updateSuggestions} />
       </div>
     )
   }

@@ -9,7 +9,7 @@ class Autocomplete extends Component {
 
     return (
       <div>
-        <input type="text" onChange={ this.updateSuggestions } />
+        <input type="text" onChange={this.props.onInputChange} />
         <ul>{ listItems }</ul>
       </div>
     )
