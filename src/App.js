@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
+import Autocomplete from './Autocomplete.js';
 
 class App extends Component {
   // Obviously we should also supply so OUTSIDE the autosuggest component we should filter the list that should be supplied and shown by our autosuggest component.
   state = {
-    suggestions: []
+    suggestions: ["apple", "banana", "orange"]
   }
 
   getSuggestions = () => {
@@ -23,14 +24,10 @@ class App extends Component {
   }
 
   render() {
-    const listItems = this.state.suggestions.map((item) => { 
-      return <li key={item.url}>{item.name}</li> 
-    })
-
     return (
       <div>
-        <input type="text" onChange={ this.updateSuggestions } />
-        <ul>{ listItems }</ul>
+        <h1>Compare stats of Pokemon</h1>
+        <Autocomplete suggestions={this.state.suggestions} />
       </div>
     )
   }
