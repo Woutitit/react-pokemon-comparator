@@ -4,7 +4,7 @@ class Autocomplete extends Component {
   render() {
     const listItems = this.props.suggestions.map((item) => { 
       // return <li key={item.url}>{item.name}</li> 
-      return <li key={item}>{item}</li> 
+      return <li key={item.name}>{item.name}</li> 
     })
 
     return (
