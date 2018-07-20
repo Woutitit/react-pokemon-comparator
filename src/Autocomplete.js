@@ -9,7 +9,7 @@ class Autocomplete extends Component {
 
     return (
       <div>
-        <input type="text" onChange={this.props.onInputChange} />
+        <input type="text" onChange={(evt) => { this.props.onChangeInput(evt.target.value); }} />
         <ul>{ listItems }</ul>
       </div>
     )
