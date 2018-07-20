@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    suggestions: []
+    suggestions: ["apple", "banana", "orange"]
   }
 
   getSuggestions = () => {
@@ -13,20 +13,20 @@ class App extends Component {
   }
 
   updateSuggestions = () => {
-    
+
   }
 
   render() {
+    const listItems = this.state.suggestions.map((item) => { 
+      return <li key={item}>{item}</li> 
+    })
+
     return (
       <div>
         <input type="text" onChange={ this.updateSuggestions } />
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
+        <ul>{ listItems }</ul>
       </div>
-      )
+    )
   }
 }
 
