@@ -1,4 +1,8 @@
+import 'bootstrap3/dist/css/bootstrap.min.css';
+import 'jquery/src/jquery';
+import 'bootstrap3/dist/js/bootstrap.min.js';
 import React, { Component } from 'react';
+import { FormControl } from 'react-bootstrap';
 
 class Autocomplete extends Component {
   render() {
@@ -9,7 +13,7 @@ class Autocomplete extends Component {
 
     return (
       <div>
-        <input type="text" onChange={(evt) => { this.props.onChangeInput(evt.target.value); }} />
+        <FormControl type="text" onChange={(evt) => { this.props.onChangeInput(evt.target.value); }} />
         <ul>{ listItems }</ul>
       </div>
     )
