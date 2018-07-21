@@ -1,3 +1,6 @@
+import 'bootstrap3/dist/css/bootstrap.min.css';
+import 'jquery/src/jquery';
+import 'bootstrap3/dist/js/bootstrap.min.js';
 import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
@@ -25,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div class="container">
         <h1>Compare stats of Pokemon</h1>
         <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
       </div>

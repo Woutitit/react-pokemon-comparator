@@ -1,6 +1,3 @@
-import 'bootstrap3/dist/css/bootstrap.min.css';
-import 'jquery/src/jquery';
-import 'bootstrap3/dist/js/bootstrap.min.js';
 import React, { Component } from 'react';
 import { FormControl } from 'react-bootstrap';
 
