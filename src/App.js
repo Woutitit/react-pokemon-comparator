@@ -2,6 +2,7 @@ import 'bootstrap3/dist/css/bootstrap.min.css';
 import 'jquery/src/jquery';
 import 'bootstrap3/dist/js/bootstrap.min.js';
 import React, { Component } from 'react';
+import { Grid, Table } from 'react-bootstrap';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
@@ -28,10 +29,58 @@ class App extends Component {
 
   render() {
     return (
-      <div class="container">
+      <Grid>
         <h1>Compare stats of Pokemon</h1>
-        <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
-      </div>
+        <p>Select up to 5 Pokémon to compare.</p>
+          <Table striped bordered condensed hover responsive>
+            <tbody>
+              <tr>
+              <th>
+              </th>
+                <td>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
+                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
+                </td>
+                <td>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
+                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
+                </td>
+                <td>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
+                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
+                </td>
+                <td>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
+                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
+                </td>
+                <td>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
+                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
+                </td>
+              </tr>
+              <tr>
+              <th>
+                HP
+              </th>
+                <td>
+                  45
+                </td>
+                <td>
+                  45
+                </td>
+                <td>
+                  45
+                </td>
+                <td>
+                  45
+                </td>
+                <td>
+                  45
+                </td>
+              </tr>
+            </tbody>
+          </Table>;
+      </Grid>
     )
   }
 }
