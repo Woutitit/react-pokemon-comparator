@@ -6,7 +6,7 @@ import { Grid, Table } from 'react-bootstrap';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
-import Autocomplete from './Autocomplete.js';
+import Combobox from './Combobox.js';
 
 class App extends Component {
   // Obviously we should also supply so OUTSIDE the autosuggest component we should filter the list that should be supplied and shown by our autosuggest component.
@@ -32,54 +32,7 @@ class App extends Component {
       <Grid>
         <h1>Compare stats of Pokemon</h1>
         <p>Select up to 5 Pokémon to compare.</p>
-          <Table striped bordered condensed hover responsive>
-            <tbody>
-              <tr>
-              <th>
-              </th>
-                <td>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
-                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
-                </td>
-                <td>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
-                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
-                </td>
-                <td>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
-                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
-                </td>
-                <td>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
-                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
-                </td>
-                <td>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" />
-                  <Autocomplete suggestions={this.state.suggestions} onChangeInput={this.updateSuggestions} />
-                </td>
-              </tr>
-              <tr>
-              <th>
-                HP
-              </th>
-                <td>
-                  45
-                </td>
-                <td>
-                  45
-                </td>
-                <td>
-                  45
-                </td>
-                <td>
-                  45
-                </td>
-                <td>
-                  45
-                </td>
-              </tr>
-            </tbody>
-          </Table>;
+          <Combobox suggestions={this.state.suggestions}></Combobox>
       </Grid>
     )
   }

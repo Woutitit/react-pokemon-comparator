@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormControl } from 'react-bootstrap';
+import { FormControl, Panel } from 'react-bootstrap';
 
 class Autocomplete extends Component {
   render() {
@@ -11,7 +11,9 @@ class Autocomplete extends Component {
     return (
       <div>
         <FormControl type="text" onChange={(evt) => { this.props.onChangeInput(evt.target.value); }} />
-        <ul>{ listItems }</ul>
+          <ul>
+            { listItems }
+          </ul>
       </div>
     )
   }
